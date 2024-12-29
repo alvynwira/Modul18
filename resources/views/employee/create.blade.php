@@ -23,15 +23,16 @@
                             <div class="col-md-6 mb-3">
                                 <label for="lastName" class="form-label">Last Name</label>
                                 <input class="form-control @error('lastName') is-invalid @enderror" type="text"
-                                    name="lastName" id="lastName" value="{{ old('lastName') }}" placeholder="Enter Last Name">
+                                    name="lastName" id="lastName" value="{{ old('lastName') }}"
+                                    placeholder="Enter Last Name">
                                 @error('lastName')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
-                                    id="email" value="{{ old('email') }}" placeholder="Enter Email">
+                                <input class="form-control @error('email') is-invalid @enderror" type="text"
+                                    name="email" id="email" value="{{ old('email') }}" placeholder="Enter Email">
                                 @error('email')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
@@ -72,11 +73,11 @@
                     </div>
                 </div>
             </form>
-    
+
         </div>
     @endsection
-    
+
     @vite('resources/js/app.js')
     </body>
-    
+
     </html>

@@ -12,6 +12,7 @@
                     </div>
                     <hr>
                     <div class="row">
+                        {{-- First Name --}}
                         <div class="col-md-6 mb-3">
                             <label for="firstName" class="form-label">First Name</label>
                             <input class="form-control @error('firstName') is-invalid @enderror" type="text"
@@ -22,6 +23,7 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
+                        {{-- Last Name --}}
                         <div class="col-md-6 mb-3">
                             <label for="lastName" class="form-label">Last Name</label>
                             <input class="form-control @error('lastName') is-invalid @enderror" type="text"
@@ -32,6 +34,7 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
+                        {{-- Email --}}
                         <div class="col-md-6 mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
@@ -41,6 +44,7 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
+                        {{-- Age --}}
                         <div class="col-md-6 mb-3">
                             <label for="age" class="form-label">Age</label>
                             <input class="form-control @error('age') is-invalid @enderror" type="text" name="age"
@@ -50,6 +54,7 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
+                        {{-- Position --}}
                         <div class="col-md-12 mb-3">
                             <label for="position" class="form-label">Position</label>
                             <select name="position" id="position" class="form-select">

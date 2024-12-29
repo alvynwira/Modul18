@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     /**
      * Membuat instance controller baru.
-     * 
+     *
      * Menambahkan middleware 'auth' untuk memastikan
      * pengguna terautentikasi sebelum mengakses halaman ini.
      *
@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-       
+    
         return view('home');
     }
 }

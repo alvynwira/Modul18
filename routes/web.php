@@ -18,16 +18,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Redirect halaman utama ke halaman login
 Route::get('/', function () {
     return redirect('login');
 });
 
-Route::get('home', [HomeController::class, 'index'])->name('home')->middleware('auth');
-
-//Route pertanyaan no 1
-Route::resource('employees', EmployeeController::class)->middleware('auth');
-Route::get('profile', ProfileController::class)->name('profile')->middleware('auth');
-
+//Route otentikasi (login, register, dll.)
 Auth::routes();
 
-Route::post('/login', [LoginController::class, 'authenticate']);
+//Route untuk pengguna yang sudah terautentikasi
+Route::middleware('auth')->group(function () {
+    //Route untuk halaman home
+    Route::get('home', [HomeController::class, 'index'])->name('home');
+
+    //Route resource untuk karyawan
+    Route::resource('employees', EmployeeController::class);
+
+    //Route untuk halaman profil
+    Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+});

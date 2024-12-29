@@ -23,7 +23,7 @@ Route::get('/', function () {
     return redirect('login');
 });
 
-//Route otentikasi (login, register, dll.)
+//Route All 
 Auth::routes();
 
 //Route untuk pengguna yang sudah terautentikasi

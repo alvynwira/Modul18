@@ -44,7 +44,7 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
-                        {{-- Age --}}
+                        
                         <div class="col-md-6 mb-3">
                             <label for="age" class="form-label">Age</label>
                             <input class="form-control @error('age') is-invalid @enderror" type="text" name="age"

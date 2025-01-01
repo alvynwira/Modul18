@@ -10,7 +10,6 @@
                             <h4>Create Employee</h4>
                         </div>
                         <hr>
-                        {{-- First Name --}}
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName" class="form-label">First Name</label>
